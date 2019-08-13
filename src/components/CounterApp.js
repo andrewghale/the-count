@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../the_count.svg'
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -61,6 +62,7 @@ function CounterApp() {
     return (
         <div>
             <Wrapper>
+                <img src={logo} width="200" height="200" alt="the count"></img>
                 <Title>The Count</Title>
                 <Total>
                     {count}

@@ -1,1 +1,1 @@
-This is Counter App which uses React.
+This is a Counter App that uses React.

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import logo from '../the_count.svg'
+import logo from '../the_count_14aug.svg'
 import styled from 'styled-components';
 
 const Button = styled.button`
-    background-color: aquamarine;
+    background-color: rgba(240, 240, 240, 1);
     border: none;
     border-radius: 4px;
     margin: 1rem;
@@ -19,8 +19,17 @@ const Title = styled.h1`
     border-radius: 4px;
 `;
 
+const Reset = styled.button`
+    background-color: rgba(176, 59, 59, 1);
+    border: none;
+    border-radius: 4px;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+`;
+
 const Total = styled.div`
-    background-color: rgb(250, 250, 250);
+    background-color: rgba(240, 240, 240, 0.3);
     border-radius: 4px;
     padding: 2rem 3rem;
     margin: 2rem;
@@ -33,9 +42,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     padding: 1rem;
     width: 500px;
-    background: linear-gradient(45deg, #9e572d 0%,#f9f44f 37%,#7db9e8 100%);
-    background-size: 400%;
-    background-position-x: -35%;
+    background: linear-gradient(45deg, #4d3252 0%,#8d6c93 65%,#aa2338 100%);    background-position-x: -35%;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -62,14 +69,16 @@ function CounterApp() {
     return (
         <div>
             <Wrapper>
-                <img src={logo} width="200" height="200" alt="the count"></img>
+                <img src={logo} width="400" height="400" alt="the count"></img>
                 <Title>The Count</Title>
                 <Total>
                     {count}
                 </Total>
-                <Button onClick={handleIncrement}>+</Button>
-                <Button onClick={handleDecrement}>-</Button>
-                <Button onClick={handleReset}>Reset</Button>
+                <div>
+                    <Button onClick={handleDecrement}>-</Button>
+                    <Button onClick={handleIncrement}>+</Button>
+                    <Reset onClick={handleReset}>Reset</Reset>
+                </div>
             </Wrapper>
         </div>
     )

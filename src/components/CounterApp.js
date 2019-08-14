@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../the_count_14aug.svg'
+import logo from '../img/the_count_14aug.svg'
 import styled from 'styled-components';
 
 const Button = styled.button`

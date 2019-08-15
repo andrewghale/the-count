@@ -1,0 +1,18 @@
+// @keyframes click {
+//     0%   { transform: scale(1.04); }
+//     50%   { transform: scale(1.00); }
+//     100% { transform: scale(1.04); }
+// }
+
+
+@keyframes click {
+    0%   {
+        transform: scale(1.04);
+    }
+    50% {
+        transform: scale(1.00);
+    }
+    100% {
+        transform: scale(1.04);
+    }
+}

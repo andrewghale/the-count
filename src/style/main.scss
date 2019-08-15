@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'base';
+
+.wrapper {
+    font-family: Arial;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 500px;
+    background: linear-gradient(45deg, #4d3252 0%,#8d6c93 65%,#aa2338 100%);    background-position-x: -35%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button {
+    background: rgba(230, 230, 230, 0.8);
+}
+
+.button, .reset {
+    &:active {
+        animation: click 0.08s 1;
+    }
+}

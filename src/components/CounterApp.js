@@ -3,12 +3,12 @@ import logo from '../img/the_count_14aug.svg'
 import styled from 'styled-components';
 
 const Button = styled.button`
-    background-color: rgba(240, 240, 240, 1);
     border: none;
     border-radius: 4px;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
     padding: 1rem 2rem;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: bold;
     `;
 
 const Title = styled.h1`
@@ -16,6 +16,7 @@ const Title = styled.h1`
     color: black;
     background: rgba(255, 255, 255, 0.3);
     padding: 2rem;
+    margin: 1rem;
     border-radius: 4px;
 `;
 
@@ -32,21 +33,8 @@ const Total = styled.div`
     background-color: rgba(240, 240, 240, 0.3);
     border-radius: 4px;
     padding: 2rem 3rem;
-    margin: 2rem;
+    margin: 1rem 2rem;
     font-size: 3rem;
-`;
-
-const Wrapper = styled.div`
-    font-family: Arial;
-    font-size: 18px;
-    margin: 0 auto;
-    padding: 1rem;
-    width: 500px;
-    background: linear-gradient(45deg, #4d3252 0%,#8d6c93 65%,#aa2338 100%);    background-position-x: -35%;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 `;
 
 function CounterApp() {
@@ -67,19 +55,17 @@ function CounterApp() {
     }
 
     return (
-        <div>
-            <Wrapper>
-                <img src={logo} width="400" height="400" alt="the count"></img>
-                <Title>The Count</Title>
-                <Total>
-                    {count}
-                </Total>
-                <div>
-                    <Button onClick={handleDecrement}>-</Button>
-                    <Button onClick={handleIncrement}>+</Button>
-                    <Reset onClick={handleReset}>Reset</Reset>
-                </div>
-            </Wrapper>
+        <div className="wrapper">
+            <img src={logo} width="400" height="400" alt="the count"></img>
+            <Title>The Count</Title>
+            <Total>
+                {(count === 0) ? "Zero":count}
+            </Total>
+            <div>
+                <Button className='button' onClick={handleDecrement}>-</Button>
+                <Button className='button' onClick={handleIncrement}>+</Button>
+                <Reset className='reset' onClick={handleReset}>Reset</Reset>
+            </div>
         </div>
     )
 }

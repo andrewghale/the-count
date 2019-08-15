@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../img/the_count_14aug.svg'
+import logo from '../assets/img/the_count_14aug.svg'
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -54,6 +54,9 @@ function CounterApp() {
         setCount(0);
     }
 
+    let resetClass = "";
+    resetClass += (count === 0) ? "red-bg":"white-bg";
+
     return (
         <div className="wrapper">
             <img src={logo} width="400" height="400" alt="the count"></img>
@@ -64,7 +67,7 @@ function CounterApp() {
             <div>
                 <Button className='button' onClick={handleDecrement}>-</Button>
                 <Button className='button' onClick={handleIncrement}>+</Button>
-                <Reset className='reset' onClick={handleReset}>Reset</Reset>
+                <Reset className={resetClass} onClick={handleReset}>Reset</Reset>
             </div>
         </div>
     )

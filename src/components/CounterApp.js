@@ -40,17 +40,17 @@ const Total = styled.div`
 function CounterApp() {
     const [count, setCount] = useState(0);
 
-    function handleIncrement() {
+    const handleIncrement = () => {
         setCount(count + 1);
     }
 
-    function handleDecrement() {
+    const handleDecrement = () => {
         if (!count <= 0) {
         setCount(count - 1);
         }
     }
 
-    function handleReset() {
+    const handleReset = () => {
         setCount(0);
     }
 

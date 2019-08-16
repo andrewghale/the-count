@@ -23,6 +23,21 @@
     }
 }
 
+img {
+    margin-top: 0;
+}
+
+.oddOrEven {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: rgba(230, 230, 230, 0.3);
+}
+
 .red-bg {
     background-color: red;
 }

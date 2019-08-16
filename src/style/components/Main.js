@@ -14,7 +14,7 @@ export const Title = styled.h1`
     color: black;
     background: rgba(255, 255, 255, 0.3);
     padding: 2rem;
-    margin: 1rem;
+    margin: 0.5rem;
     border-radius: 4px;
 `;
 

@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import logo from '../assets/img/the_count_14aug.svg'
 import Count from './Count';
 import OddOrEven from './OddOrEven';
+import DivByThree from './DivByThree';
+import DivByFour from './DivByFour';
+import DivByFive from './DivByFive';
+import DivBySix from './DivBySix';
+// import IsPrime from './IsPrime';
 import { Button, Title, Reset } from '../style/components/Main';
 
 const CounterApp = () => {
@@ -28,7 +33,14 @@ const CounterApp = () => {
             <Count initialCount={count}/>
             <div className="oddOrEven">
                 This number is
-                <OddOrEven oddeven={count} />
+                <ul>
+                    <OddOrEven oddeven={count} />
+                    <DivByThree divbythree={count} />
+                    <DivByFour divbyfour={count} />
+                    <DivByFive divbyfive={count} />
+                    <DivBySix divbysix={count} />
+                    {/* <IsPrime isprime={count} /> */}
+                </ul>
             </div>
             <div>
                 <Button className='button' onClick={handleDecrement}>-</Button>

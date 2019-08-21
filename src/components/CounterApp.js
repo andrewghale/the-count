@@ -6,6 +6,8 @@ import DivByThree from './DivByThree';
 import DivByFour from './DivByFour';
 import DivByFive from './DivByFive';
 import DivBySix from './DivBySix';
+import DivBySeven from './DivBySeven';
+import DivByEight from './DivByEight';
 // import IsPrime from './IsPrime';
 import { Button, Title, Reset } from '../style/components/Main';
 
@@ -39,6 +41,8 @@ const CounterApp = () => {
                     <DivByFour divbyfour={count} />
                     <DivByFive divbyfive={count} />
                     <DivBySix divbysix={count} />
+                    <DivBySeven divbyseven={count} />
+                    <DivByEight divbyeight={count} />
                     {/* <IsPrime isprime={count} /> */}
                 </ul>
             </div>

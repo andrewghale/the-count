@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import logo from '../assets/img/the_count_14aug.svg'
 import Count from './Count';
-import OddOrEven from './OddOrEven';
-import DivByThree from './DivByThree';
-import DivByFour from './DivByFour';
-import DivByFive from './DivByFive';
-import DivBySix from './DivBySix';
-import DivBySeven from './DivBySeven';
-import DivByEight from './DivByEight';
+// import OddOrEven from './OddOrEven';
+// import DivByThree from './DivByThree';
+// import DivByFour from './DivByFour';
+// import DivByFive from './DivByFive';
+// import DivBySix from './DivBySix';
+// import DivBySeven from './DivBySeven';
+// import DivByEight from './DivByEight';
+import DivisibleBy from './DivisibleBy';
 // import IsPrime from './IsPrime';
 import { Button, Title, Reset } from '../style/components/Main';
 
@@ -36,14 +37,17 @@ const CounterApp = () => {
             <div className="oddOrEven">
                 This number is
                 <ul>
-                    <OddOrEven oddeven={count} />
+                    {/* <OddOrEven oddeven={count} />
                     <DivByThree divbythree={count} />
                     <DivByFour divbyfour={count} />
                     <DivByFive divbyfive={count} />
                     <DivBySix divbysix={count} />
                     <DivBySeven divbyseven={count} />
-                    <DivByEight divbyeight={count} />
+                    <DivByEight divbyeight={count} /> */}
+
                     {/* <IsPrime isprime={count} /> */}
+
+                    <DivisibleBy divby={count}/>
                 </ul>
             </div>
             <div>
